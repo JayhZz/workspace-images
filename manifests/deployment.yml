@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "akscontosovideo-0bb2"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "akscontosovideo-0bb2"
+  template:
+    metadata:
+      labels:
+        app: "akscontosovideo-0bb2"
+    spec:
+      containers:
+        - name: "akscontosovideo-0bb2"
+          image: "mycontainerregistry1126.azurecr.io/akscontosovideo"
+          ports:
+          - containerPort: 80
