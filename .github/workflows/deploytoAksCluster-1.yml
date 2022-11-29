@@ -38,7 +38,7 @@ jobs:
         container-registry-password: ${{ secrets.acr_mycontainerregistry1126_password }}
         secret-name: akscontosovidockerauth
        
-    - uses: azure/k8s-deploy@v1.2
+    - uses: azure/k8s-deploy@v1
       with:
         namespace: aks-contoso-videob93f
         manifests: |
