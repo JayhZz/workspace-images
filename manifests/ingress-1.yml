@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "akscontosovideo-aa39"
+    labels:
+        app: "akscontosovideo-aa39"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: aks-contoso-videob93f-akscontosovideo-aa39.75263d3f65c941bf8534.southeastasia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "akscontosovideo-aa39"
+                servicePort: 80
